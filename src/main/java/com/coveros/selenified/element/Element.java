@@ -843,8 +843,8 @@ public class Element {
         if (!isPresentDisplayedEnabledInput(action, expected, cantClear)) {
             return;
         }
-        WebElement webElement = getWebElement();
         try {
+        	WebElement webElement = getWebElement();
             webElement.clear();
         } catch (Exception e) {
             log.error(e);
