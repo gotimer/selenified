@@ -380,17 +380,7 @@ public class TestSetupTest {
         Assert.assertEquals(capability.getBrowserName(), "iPhone");
         Assert.assertEquals(capability.getCapability(CapabilityType.BROWSER_NAME), "iPhone");
     }
-
-    @Test
-    public void setupBrowserCapabilityMaronetteTest() throws InvalidBrowserException {
-        TestSetup setup = new TestSetup();
-        setup.setupBrowserCapability(Browser.MARIONETTE);
-        DesiredCapabilities capability = setup.getDesiredCapabilities();
-        Assert.assertEquals(capability.getBrowserName(), "firefox");
-        Assert.assertEquals(capability.getCapability(CapabilityType.BROWSER_NAME), "firefox");
-        Assert.assertTrue((Boolean) capability.getCapability("marionette"));
-    }
-
+    
     @Test
     public void setupBrowserCapabilityOperaTest() throws InvalidBrowserException {
         TestSetup setup = new TestSetup();
